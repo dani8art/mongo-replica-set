@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mongo00:
+    container_name: mongo00
+    build: https://github.com/dani8art/mongo-replica-set.git
+    links:
+      - mongo01:mongo01
+      - mongo02:mongo02
+  mongo01:
+    container_name: mongo01
+    build: https://github.com/dani8art/mongo-replica-set.git
+  mongo02:
+    container_name: mongo02
+    build: https://github.com/dani8art/mongo-replica-set.git
